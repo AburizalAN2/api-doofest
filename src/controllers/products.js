@@ -281,7 +281,9 @@ exports.updateProduct = async (req, res, next) => {
           message: err.message,
         })
     }
-  } else if (category === 'sportID') {
+  }
+  
+  if (category === 'sportID') {
     try {
       const db = await database.ref(`/products/${productType}/${id}/sportID`)
 
@@ -297,7 +299,9 @@ exports.updateProduct = async (req, res, next) => {
           message: error.message,
       })
     }
-  } else if (category === 'sports') {
+  }
+  
+  if (category === 'sports') {
     try {
       const db = await database.ref(`/products/${productType}/${id}/sports`)
 

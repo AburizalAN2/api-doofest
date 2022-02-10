@@ -26,7 +26,6 @@ app.use('/api', productsRoutes);
 app.use('/api', flashSaleRoutes);
 
 
-
 app.listen('4000', () => {
   console.log('connected to port 4000')
 })
